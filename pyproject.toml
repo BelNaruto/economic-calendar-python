@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "econcal"
+version = "0.1.0"
+description = "Economic calendar API for Python: Investing.com events (CPI, NFP, FOMC...) via the Apify Actor, with CLI, Excel/CSV export and news-blackout filters for backtesting"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Pinto Studio"}]
+keywords = ["economic calendar", "economic calendar api", "forex", "investing.com", "fomc", "cpi", "nfp", "backtesting", "apify"]
+dependencies = ["requests>=2.31", "pandas>=1.5", "openpyxl>=3.1", "rich>=13", "tzdata>=2024.1"]
+
+[project.urls]
+"Apify Actor" = "https://apify.com/pintostudio/economic-calendar-data-investing-com"
+Homepage = "https://github.com/BelNaruto/economic-calendar-python"
+
+[project.scripts]
+econcal = "econcal.cli:main"
+
+[tool.setuptools]
+packages = ["econcal"]
